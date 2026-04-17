@@ -1,0 +1,1189 @@
+*{
+margin: 0;
+padding: 0;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+
+ /* BARRA DE NAVEGACION */
+nav ul{
+    display:flex;
+    border-bottom:solid #258d19;
+   justify-content: space-between;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+
+}
+
+li:first-child{
+    align-items: start;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    margin-top:  20px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 20px;
+    align-items: center;
+    justify-items: center
+
+}
+ nav ul li a::after{
+    content: "";
+    height: 4px;
+    background-color: #258d19;
+    width: 0;
+display: block;
+transition: all 300ms;
+ }
+
+ nav ul li a:hover::after{
+    width: auto;
+    
+ }
+ /*FIN NAVBAR*/
+ 
+  /*PORTADA */
+  .portada {
+background-image: url(/semillas.jfif);
+background-size: cover;
+background-attachment: scroll;
+color: white;
+text-align: center;
+width:100%;
+position: relative;
+display: inline-block;
+cursor: pointer;
+ }
+ .portada h1{
+  font-family: Croissant One;
+    font-size: 155px;
+    margin: 0%;
+    text-align: center;
+   padding: 10%;
+ }
+ h1 img{
+    filter: drop-shadow(10px 6px 6px rgb(230, 224, 60));
+ }
+
+ .linkers{   
+    position: relative; 
+    text-decoration: none;
+    color: #eee;
+}
+ .linkers
+ .imagenhover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s; 
+}
+
+.linkers:hover .imagenhover {
+    opacity: 1;
+    filter: drop-shadow(10px 6px 6px rgb(21, 255, 0));
+    
+}
+
+
+.linkers:hover .imagenbase {
+    opacity: 0;
+}
+
+.next{
+    position: absolute;
+    bottom: 30px; 
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: solid white; 
+    border-width: 0 4px 4px 0; 
+    display: inline-block;
+    padding: 3px;
+    transform: translateX(-50%) rotate(45deg); 
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0) rotate(45deg);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px) rotate(45deg); 
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px) rotate(45deg); 
+    }
+}
+
+ /*FIN PORTADA*/
+
+  /*NOSOTROS*/
+
+  .nosotros{
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-left: 400px;
+    padding-right: 400px;
+}
+.nosotros p{
+    font-family: Jost;
+    font-size: 18px;
+      padding-top: 50px;
+    line-height: 30px;
+}
+h3{
+    font-family: Croissant One;
+    font-size: 50px;
+    color: #2D6529;
+    text-align: center;
+}
+ .parrafo{
+    display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 1em;
+  justify-content: space-between;
+ margin-left: 50px;
+ margin-right: 50px
+}
+.parrafo p{
+    font-family: Jost;
+    font-size: 18px;
+    color: black;
+    padding-top: 50px;
+    line-height: 30px;
+}
+/*FIN NOSOTROS*/
+
+.separador{
+    text-align: center;
+    margin: 70px;
+   
+}
+
+
+/* CERTIFICACIONES*/
+
+.certificaciones{
+    background-color: #30422E;
+    color: white;
+    width: auto;
+    height: auto;
+    padding:  150px 400px;
+    text-align: center;
+    margin-top: 100px;
+}
+.iconos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.iconos p,.certificaciones p{
+    color: white;
+}
+
+.certificaciones h2{
+     font-family: Croissant One;
+    font-size: 90px;
+    margin: 0%;
+    text-align: center;
+}
+
+.iconos p{
+margin-top: auto;
+font-size: 24px;
+ font-family: Jost;
+ padding-top: 50px;
+    line-height: 30px;
+}
+
+p{
+    font-family: Jost;
+    font-size: 18px;
+    color: black;
+    padding-top: 50px;
+    line-height: 30px;
+}
+
+/* FIN CERTIFICACIONES*/
+
+/* RECETAS*/
+.card-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+.recetas {
+    font-family: Croissant One;
+   font-size: 48px;
+    margin: 50px;
+    text-align: center;
+    color: #A07752;
+}
+.recipe-card {
+    background-color: #ffffff; 
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    width: 300px; 
+    transition: transform 0.3s ease; 
+     display: flex; 
+    flex-direction: column; 
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); 
+}
+
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+}
+
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+     flex-grow: 1; 
+     justify-content: space-between;
+}
+
+.card-content h3{
+    color: #2e7d32; 
+    margin-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.summary {
+    font-style: italic;
+    color: #666;
+    flex-grow: 1; 
+    margin-bottom: 15px; 
+    text-align: justify;
+}
+
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 5px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.details p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.card-content ul {
+        padding-left: 20px;
+}
+
+.card-content li::before {
+   
+    content: ""; 
+    background-image: url(assets/img/cards/green\ heart.png);
+    background-size: 15px 15px; 
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 3px; 
+    width: 15px;
+    height: 15px;
+}
+
+.card-content ul li {
+   list-style: none; 
+    padding-left: 25px; 
+    position: relative; 
+    margin-bottom: 5px; 
+    color: black;
+}
+
+
+.btn-recipe {
+    display: block; 
+    background-color: #00796b; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-recipe:hover {
+    background-color: #004d40; 
+}
+/* FIN RECETAS*/
+
+
+
+
+
+
+/* GALERIA*/
+.productos{
+    background-color: white;
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    text-align: center;
+    
+}
+
+.productos h3{
+    color: #A07752;
+}
+.galeria{ 
+    display: flex; 
+    flex-wrap: wrap;     
+    padding-top: 50px;
+    justify-content: center;
+    gap: 40px;
+   
+}
+
+.galeria img{
+    border-radius: 2.5rem;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11),0 2px 2px rgba(0,0,0,0.11),0 4px 4px rgba(0,0,0,0.11),0 6px 8px rgba(0,0,0,0.11),0 8px 16px rgba(0,0,0,0.11);
+   margin-left: 20px;
+   }
+article .galeria{
+    display: flex;       
+    gap: 20px; 
+    padding: 20px;
+    margin-left: 10px;
+    }
+     .galeria img:hover{
+      transform: scale(1.1);
+    }
+    /* FIN GALERIA*/
+  
+    /* FORMULARIO*/
+    iframe{
+    width: 80%;
+    padding-top: 50px;
+    margin: 50px auto;
+    display: block;
+}
+h4{
+    font-family: made sunflower;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.contenedor{
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    
+}
+
+.contenedor h3{
+    padding-bottom: 80px;
+    color: #E9AE4B;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    text-align:center;
+ }
+
+input:not([type="radio"]):not([type="checkbox"]),
+select {
+    width: 30%;
+    height: auto;
+    margin: 10px auto;
+    display: block; 
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+textarea {
+    width: 50%;
+    height: 100px;
+    margin: 10px auto;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+
+fieldset {
+    border: none;
+    padding: 15px 0;
+    margin: 20px auto;
+    text-align: center;
+    
+}
+
+
+fieldset label{
+      display: inline-block;
+      margin: 0 10px; 
+    text-align: left;
+}
+fieldset legend {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+ fieldset input[type="radio"] {
+    display: inline; 
+    width: auto;     
+    margin: 0;      
+    height: auto;
+}
+
+ 
+.contenedor p{
+    color: black;
+    padding-top: 10px;
+}
+
+.botones {
+    display: block;
+    margin: 20px 0;
+ }
+
+.boton1 {
+    display: box;
+    color: #ffffff;
+    background-color: #E9AE4B;
+    border-radius: 10px;
+    padding: 5px 25px;
+    font-family: Jost;
+    font-size: 18px;
+    border-color:#E9AE4B;
+    border-style: solid;
+ }
+
+ .boton2 {
+    display: box;
+    color: #E9AE4B;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 25px;
+    font-family: Jost;
+    font-size: 18px;
+    border-color: #E9AE4B;
+    border-style: solid;
+ } 
+
+ form{
+    font-family: Jost;
+    font-size: 18px;
+ }
+ /*FIN FORM*/
+
+/*CONTACTO*/
+ #contacto h3{
+       padding-left: 200px;
+    padding-right: 200px;
+  }
+/*FIN CONTACTO*/
+
+
+
+
+/*FOOTER*/
+ footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 200px;
+    padding-right: 200px;
+    text-align: center;
+}
+ .sobrerayado{
+     border-top: 2px solid #2D6529; 
+      padding-top: 10px; 
+      display: inline-block;
+      width:100%;
+      margin-top: 20px;
+      }
+      /* FLECHA TOP*/
+#scroll-to-top {
+    position: fixed;
+    bottom: 30px;   
+    right: 30px;     
+    z-index: 990;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: solid #2D6529; 
+    border-width: 0 4px 4px 0; 
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg); 
+    animation: bounce-up 2s infinite; 
+    background: transparent;
+    text-decoration: none; 
+}
+
+
+@keyframes bounce-up {
+    0%, 20%, 50%, 80%, 100% {
+        
+        transform: translateY(0) rotate(-135deg);
+    }
+    40% {
+        
+        transform: translateY(-10px) rotate(-135deg); 
+    }
+    60% {
+        
+        transform: translateY(-5px) rotate(-135deg);  
+    }
+}
+
+#scroll-to-top:hover {
+    border-color: #387e35; 
+}
+
+
+/* ========================================= */
+/* 1. MEDIA QUERY PARA TABLETAS (Hasta 1024px) */
+/* ========================================= */
+@media (max-width: 1024px) {
+    .nosotros, .filosofia, .parrafo {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .certificaciones, footer {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .productos {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #contacto h3 {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    /* BARRA DE NAVEGACIÓN */
+    #top ul {
+        gap: 15px;
+    }
+
+    /* PORTADA */
+    .portada h1 {
+        font-size: 70px; 
+    }
+    .imagenbase, .imagenhover {
+        height: 120px; 
+    }
+
+    /* RECETAS */
+    .card-container {
+        
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 20px;
+    }
+    .recipe-card {
+        width: 45%;
+        margin: 10px 0;
+    }
+
+    /* GALERÍA */
+    .galeria article a img {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+/* ========================================= */
+/* 2. MEDIA QUERY PARA MÓVILES (Hasta 768px) */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    
+    #top {
+        padding: 10px;
+    }
+    #top ul {
+        flex-direction: column; 
+        align-items: center;
+        padding: 0;
+    }
+    #top ul li {
+        margin: 5px 0;
+    }
+    #top ul li a {
+        font-size: 16px;
+    }
+    
+    
+    .nosotros, .filosofia, .parrafo, .certificaciones, .productos, footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #contacto h3 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    /* PORTADA */
+    .portada {
+        background-position: center 30%; 
+    }
+    .portada h1 {
+        font-size: 45px; 
+        line-height: 1;
+        padding-top: 150px;
+    }
+    .imagenbase, .imagenhover {
+        height: 80px;
+    }
+
+    /* NOSOTROS */
+    .parrafo {
+        display: block; 
+        padding-top: 20px;
+        margin: 0; 
+    }
+    .parrafo p {
+        margin: 10px 0;
+    }
+    
+   
+    .iconos {
+        flex-direction: column; 
+        align-items: center;
+        gap: 30px;
+    }
+
+    
+    .recipe-card {
+        width: 100%; 
+        flex-direction: column; 
+        text-align: center;
+    }
+    .card-image {
+        max-height: 250px;
+    }
+    .details {
+        flex-direction: row; 
+        justify-content: center;
+    }
+
+    .galeria {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+    .galeria article {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        gap: 10px;
+    }
+    .galeria article a img {
+        width: 90vw; 
+        height: auto;
+        max-width: 300px; 
+        margin-left: 0;
+    }
+
+    /* FORMULARIO */
+    .contenedor {
+        width: 90%;
+        padding: 0 10px;
+    }
+   
+    input:not([type="radio"]):not([type="checkbox"]), select, textarea {
+        width: 90%; 
+        margin: 10px auto;
+    }
+
+    /* MAPA */
+    #contacto iframe {
+       width: 90%; 
+    margin: 0 auto; 
+    padding-top: 30px;
+    }
+    #contacto h3 {
+        text-align: center; 
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* FOOTER */
+    footer {
+        padding-bottom: 70px; 
+    }
+    footer article {
+        flex-direction: column;
+    }
+    .sobrerayado {
+        font-size: 12px;
+    }
+}
+
+
+
+
+/* BARRA DE BÚSQUEDA DE RECETAS*/
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; 
+    width: 90%;
+    max-width: 600px; 
+    margin: 30px auto;
+    border: 2px solid #ccc; 
+    border-radius: 30px; 
+    padding-right: 5px; 
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-bar-container:focus-within {
+    border-color: #258d19; 
+    box-shadow: 0 0 8px rgba(37, 141, 25, 0.1); 
+}
+
+
+.search-input {
+    flex-grow: 1; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 30px 0 0 30px; 
+    font-size: 1em;
+    background-color: transparent;
+    outline: none; 
+}
+
+.search-button {
+    flex-shrink: 0; 
+    background-color: transparent; 
+    color: #c3c0c0;
+    padding: 10px 15px; 
+    border: none;
+    cursor: pointer;
+    font-family: 'Righteous', cursive;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 25px; 
+}
+.search-button {
+    font-size: 1.4em; 
+    font-weight: normal; 
+}
+
+.chat-toggle-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #258d19;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    transition: background-color 0.3s;
+}
+
+.chat-toggle-btn:hover {
+    background-color: #1a6b12;
+}
+.chat-window {
+    position: fixed;
+    bottom: 100px; 
+    right: 30px;
+    width: 300px;
+    height: 400px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    z-index: 999; 
+    font-family: Arial, sans-serif;
+}
+
+.chat-header {
+    background-color: #258d19;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.chat-body {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto; 
+    background-color: white;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px 15px; 
+    border-radius: 15px;
+    max-width: 85%;
+    width: fit-content; 
+}
+
+.message.bot {
+    background-color: #258d19; 
+    margin-right: auto;        
+    border-bottom-left-radius: 2px;
+}
+
+.message.bot p { 
+    color: white; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+.message.user {
+    background-color: #e0e0e0; 
+    color: #333;
+    margin-left: auto;         
+    border-bottom-right-radius: 2px;
+}
+
+.message.user p {
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.chat-input button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+    background-color: #555;
+}
+
+
+#scroll-to-top {
+    z-index: 990; 
+}
+.chat-toggle-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 12px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #258d19;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    transition: background-color 0.3s;
+}
+
+.chat-toggle-btn:hover {
+    background-color: #1a6b12;
+}
+
+
+.chat-window {
+    position: fixed;
+    bottom: 135px; 
+    right: 70px;
+    width: 300px;
+    height: 400px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    z-index: 999; 
+    font-family: Arial, sans-serif;
+}
+
+.chat-header {
+    background-color: #258d19;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.chat-body {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto; 
+    background-color: white;
+    font-family: Jost;
+}
+
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px 15px; 
+    border-radius: 15px;
+    max-width: 85%;
+    width: fit-content; 
+}
+
+.message.bot {
+    background-color: #258d19;
+    margin-right: auto;
+    border-bottom-left-radius: 2px;
+}
+
+
+.message.bot p { 
+    color: white; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+
+.message.user {
+    background-color: #e0e0e0; 
+    color: #333;
+    margin-left: auto;
+    border-bottom-right-radius: 2px;
+}
+.message.user p {
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.chat-input button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+    background-color: #555;
+}
+/* Elimina el subrayado de cualquier Link que tenga esta clase */
+.no-underline {
+    text-decoration: none !important;
+}
+
+/* Contenedor del total */
+.carrito-total {
+    margin-top: 30px;
+    text-align: center; /* Centra el texto del Total */
+}
+
+.carrito-total h4 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+/* Espaciado para el botón */
+.contenedor-boton-centrado {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    width: 100%;
+    margin-top: 40px; /* <--- Esto tira el botón más ABAJO */
+}
+
+/* Estilo del botón corto y centrado */
+.boton-pagar-fika.btn-chico {            
+    display: inline-block;
+}
+.boton-pagar-fika {
+    background-color: #2D6529;
+    color: white !important;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(45, 101, 41, 0.2);
+    padding: 20px;
+    align-items: center;
+}
+.boton-pagar-fika.btn-chico:hover {
+    background-color: #E9AE4B; /* Dorado Fika */
+    transform: translateY(-2px);
+    text-decoration: none !important;
+}
+
+.chat-toggle-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#6b8f71;
+  color:white;
+  border:none;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  font-size:20px;
+  cursor:pointer;
+  box-shadow:0 5px 15px rgba(0,0,0,0.25);
+}
+
+.chat-window{
+  width:320px;
+  height:420px;
+  background:white;
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  display:flex;
+  flex-direction:column;
+}
+
+.chat-header{
+  background:#6b8f71;
+  color:white;
+  padding:12px;
+  border-radius:15px 15px 0 0;
+  font-weight:bold;
+}
+
+.chat-body{
+  flex:1;
+  overflow-y:auto;
+  padding:15px;
+}
+
+.message{
+  margin-bottom:10px;
+  display:flex;
+}
+
+.message p{
+  padding:10px 14px;
+  border-radius:18px;
+  max-width:70%;
+}
+
+.message.user{
+  justify-content:flex-end;
+}
+
+.message.user p{
+  background:#6b8f71;
+  color:white;
+}
+
+.message.bot p{
+  background:#f1f1f1;
+}
+
+.typing p{
+  font-style:italic;
+  opacity:0.7;
+}
+
+.chat-input{
+  display:flex;
+  border-top:1px solid #eee;
+}
+
+.chat-input input{
+  flex:1;
+  padding:10px;
+  border:none;
+}
+
+.chat-input button{
+  background:#6b8f71;
+  color:white;
+  border:none;
+  padding:10px 15px;
+}
