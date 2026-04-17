@@ -169,16 +169,36 @@ Authorization: Bearer TOKEN
 ---
 
 ## 9. Estructura
+## 📂 Estructura Detallada del Backend
 
 backend/
-├── app.js
+├── app.js                
 ├── src/
-│   ├── models/
-│   ├── services/
-│   ├── controllers/
-│   ├── routes/
 │   ├── config/
-│   └── middleware/
+│   │   └── db.js         
+│   ├── controllers/
+│   │   ├── CategoryController.js
+│   │   └── productController.js
+│    │   └── userController.js
+│   ├── middleware/
+│   │   ├── verifyToken.js
+│   ├── models/
+│   │   ├── categoryModel.js
+│   │   └── productModel.js
+│   │   └── userModel.js
+│   ├── routes/
+│   │   ├── categoryRoute.js
+│   │   └── contactRoute.js
+│   │   ├── productRoute.js
+│   │   └── userRoute.js
+│   │
+│   └── services/
+│       ├── categoryService.js
+│       └── productService.js
+│       └── userService.js
+├── .env                  
+└── package.json
+
 
 ---
 
